@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gradient-1">
-    <div class="text-center">Countdown Timer Component</div>
-    <div class="text-center font-countdown">
+  <div class="bg-gradient-1" id="Countdown">
+    <div class="text-center font-countdown p-t-250">
+      <div class="text-center">Countdown Timer Component</div>
       <div id="" class="d-flex justify-content-center">
         <div id="menit" class="countdown m-r-10"></div>
         <div class="countdown f-24 m-r-10">:</div>

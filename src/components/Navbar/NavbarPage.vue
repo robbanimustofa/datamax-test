@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed-top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/">Test Datamax with Vue</a>
       <button
@@ -15,17 +15,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item" id="nav1">
             <a class="nav-link" href="/"
               >Increment Decrement Page
               <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="nav2">
             <a class="nav-link" href="/countdowntimer">Countdown Timer Page</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+          <li class="nav-item" id="nav3">
+            <a class="nav-link" href="/listusers">List Users</a>
           </li>
         </ul>
       </div>
@@ -37,9 +37,11 @@ export default {
   name: "NavbarPage",
   methods: {
     gocoundownt() {
+      $("#nav2").addClass("active");
       this.$router.push("/countdowntimer");
     },
     goincrement() {
+      $("#nav1").addClass("active");
       this.$router.push("/");
     },
   },

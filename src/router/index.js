@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import CoundownTimer from "../components/CoundownTimer";
 import IncrementDecrementNumber from "../components/IncrementDecrementNumber";
+import ListProfile from "../components/ListProfile";
 Vue.use(VueRouter);
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
   {
     path: "/countdowntimer",
     component: CoundownTimer,
+  },
+
+  {
+    path: "/listusers",
+    component: ListProfile,
   },
 ];
 

@@ -1,3 +1,6 @@
+/* html,body{
+    overflow: hidden;
+} */
 .font-countdown{
     font-family: 'Dosis', sans-serif;
 }
@@ -9,6 +12,18 @@
 }
 .m-t-10{
     margin-top: 10px;
+}
+
+.m-t-70{
+    margin-top: 70px;
+}
+
+.p-lr-20{
+    padding: 0px 20px;
+}
+
+.p-t-250{
+    padding-top: 250px;
 }
 
 .m-r-10{
@@ -35,3 +50,9 @@
     justify-content: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.img-circle-big {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
