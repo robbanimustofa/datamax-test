@@ -1,16 +1,32 @@
 <template>
-  <div>
+  <div class="bg-gradient-1">
     <div class="text-center">Countdown Timer Component</div>
-    <div class="text-center">
+    <div class="text-center font-countdown">
       <div id="" class="d-flex justify-content-center">
-        <div id="menit"></div>
-        <div>:</div>
-        <div id="detik"></div>
+        <div id="menit" class="countdown m-r-10"></div>
+        <div class="countdown f-24 m-r-10">:</div>
+        <div class="countdown m-r-10" id="detik"></div>
       </div>
     </div>
-    <button @click="startTimer">Start</button>
-    <button @click="stopTimer">Stop</button>
-    <button @click="resetTimer">Restart</button>
+    <div class="text-center m-t-10">
+      <span class="badge badge-pill badge-info f-16">Menit</span>
+      <span class="badge badge-pill badge-info badge-style f-16">Detik</span>
+    </div>
+    <div class="m-t-10">
+      <button type="button" class="btn btn-primary m-r-10" @click="startTimer">
+        Start
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary m-r-10"
+        @click="resetTimer"
+      >
+        Reset
+      </button>
+      <button type="button" class="btn btn-danger m-r-10" @click="stopTimer">
+        Stop
+      </button>
+    </div>
   </div>
 </template>
 <script>
@@ -19,15 +35,14 @@ export default {
   name: "CountdownTimer",
   data() {
     return {
-      menit: 11,
-      detik: 10,
+      menit: 25,
+      detik: 0,
       start: false,
       interval: null,
     };
   },
   mounted() {
-    $("#menit").text(this.menit);
-    $("#detik").text(this.detik);
+    this.resetTimer();
     this.interval = setInterval(this.intervalCallback, 1000);
   },
   methods: {
@@ -37,24 +52,20 @@ export default {
         this.intervalCallback();
       }
     },
-    toggleTimer() {
-      if (this.start) {
-        this.start = false;
-      } else {
-        if (!this.menit && !this.detik) {
-          this.resetTimer();
-          this.start = true;
-        }
-      }
-    },
-
     stopTimer() {
-      clearInterval(this.menit && this.detik);
+      this.start = false;
+      this.intervalCallback();
     },
 
     resetTimer() {
-      this.menit = 35;
+      this.menit = 25;
       this.detik = 0;
+      $("#menit").text(this.menit);
+      if (this.detik < 10) {
+        $("#detik").text("0" + this.detik);
+      } else {
+        $("#detik").text(this.detik);
+      }
     },
     intervalCallback() {
       if (!this.start) return false;

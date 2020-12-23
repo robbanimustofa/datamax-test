@@ -1,21 +1,18 @@
 <template>
   <div id="app">
+    <Navbar />
     <div>
-      Test Datamax with Vue
-      <InDeNumber />
-      <CountTimer />
+      <router-view class="vh-100" />
     </div>
   </div>
 </template>
 
 <script>
-import InDeNumber from "./components/IncrementDecrementNumber";
-import CountTimer from "./components/CoundownTimer";
+import Navbar from "./components/Navbar/NavbarPage";
 export default {
   name: "App",
   components: {
-    InDeNumber,
-    CountTimer,
+    Navbar,
   },
 };
 </script>
@@ -27,6 +24,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>

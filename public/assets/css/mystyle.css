@@ -1,3 +1,9 @@
+.font-countdown{
+    font-family: 'Dosis', sans-serif;
+}
+.f-16{
+    font-size: 16px;
+}
 .f-24{
     font-size: 24px;
 }
@@ -7,4 +13,25 @@
 
 .m-r-10{
     margin-right: 10px;
+}
+
+.badge-style{
+    margin-left: 170px;
+}
+
+.bg-gradient-1 {
+    background: #7f7fd5;
+    background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.countdown{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
