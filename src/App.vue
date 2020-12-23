@@ -2,20 +2,22 @@
   <div id="app">
     <div>
       Test Datamax with Vue
-      <InDeNumber/>
+      <InDeNumber />
+      <CountTimer />
     </div>
   </div>
 </template>
 
 <script>
-
-import InDeNumber from './components/IncrementDecrementNumber'
+import InDeNumber from "./components/IncrementDecrementNumber";
+import CountTimer from "./components/CoundownTimer";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    InDeNumber
-  }
-}
+    InDeNumber,
+    CountTimer,
+  },
+};
 </script>
 
 <style>
